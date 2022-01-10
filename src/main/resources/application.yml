@@ -1,0 +1,27 @@
+app:
+  name: My App
+  description: Welcome to ${app.name}
+  
+my:
+  greeting: Hello World
+  list:
+    values: One, Two, Three
+    
+db:
+  connection: "{connectionString: 'http://__', userName: 'foo', password: 'pass'}"
+  host: 127.0.0.1
+  port: 1200
+
+#Below property exposes all endpoints provided by actuator
+#/actuator/configprops  : exposes all configuration properties
+management.endpoints.web.exposure.include: "*"
+
+# Default profile always active, by below property we override default profile
+# in application-test profile property if we have different profile value that will be used to override profile
+spring.profiles.active: test
+
+#Below property for spring cloud configuration
+#spring.cloud.config.uri: http://localhost:8888
+
+#spring.config.import: "optional:configserver:"
+  
