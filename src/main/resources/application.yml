@@ -24,4 +24,8 @@ spring.profiles.active: test
 #spring.cloud.config.uri: http://localhost:8888
 
 #spring.config.import: "optional:configserver:"
+
+#Below property will look for micro service specific configuration file with name 'spring-boot-config.yml' 
+#This will be used to define microservice specific configurations
+#spring.application.name: spring-boot-config
   
